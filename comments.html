@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments - IT Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .comments-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .comment-form {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .comment-form h3 {
+            color: #3a0ca3;
+            margin-bottom: 1.5rem;
+        }
+        
+        .comment-form input,
+        .comment-form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .comment {
+            background-color: white;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        
+        .comment h4 {
+            color: #3a0ca3;
+            margin-bottom: 0.5rem;
+        }
+        
+        .comment small {
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        .comment p {
+            margin-top: 1rem;
+            line-height: 1.6;
+        }
+        
+        .no-comments {
+            text-align: center;
+            padding: 3rem;
+            color: #777;
+            font-style: italic;
+        }
+        
+        .note {
+            background-color: #f0f7ff;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">IT<span>Portfolio</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="comments.html">Comments</a></li>
+            <li><a href="login.html" class="btn-login">Login</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Comments Section -->
+    <section class="comments-section">
+        <h2>Visitor Comments</h2>
+        <p>Share your thoughts, feedback, or ask questions about my work.</p>
+        
+        <div class="comments-container">
+            <!-- Comment Form -->
+            <div class="comment-form">
+                <h3>Leave a Comment</h3>
+                <input type="text" id="commentName" placeholder="Your Name" required>
+                <textarea id="commentText" placeholder="Your Comment" rows="4" required></textarea>
+                <button class="btn" onclick="submitComment()">Post Comment</button>
+                <div class="note">
+                    <p><i class="fas fa-info-circle"></i> Comments are stored locally in your browser using localStorage.</p>
+                </div>
+            </div>
+            
+            <!-- Comments Display -->
+            <h3>Recent Comments</h3>
+            <div id="commentsContainer">
+                <!-- Comments will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
